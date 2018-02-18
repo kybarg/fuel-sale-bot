@@ -130,9 +130,9 @@ bot.onText(new RegExp('^\/\\d+$', 'i'), async (msg) => {
       delete dispatch.recipients[msg.chat.id];
       value = parseInt(value);
       if (dispatch.threshold.min > value) {
-        sendToAdmins(`Sales is under threshold: ${value.toString()}`);
+        sendToAdmins(`Sales is under threshold: ${value.toString()} 👎`);
       } else if (dispatch.threshold.max < value) {
-        sendToAdmins(`Sales is over threshold: ${value.toString()}`);
+        sendToAdmins(`Sales is over threshold: ${value.toString()} 👍`);
       }
       bot.sendMessage(msg.chat.id, 'Thank you!');
     } else {
