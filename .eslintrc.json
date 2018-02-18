@@ -1,0 +1,30 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+            "jsx": true,
+            "arrowFunctions": true,
+            "experimentalObjectRestSpread": true
+
+        }
+    },
+    "rules": {
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "valid-typeof": "warn",
+        "arrow-body-style": "warn",
+        "comma-spacing": "warn",
+        "indent": ["warn",2, {"SwitchCase": 1}],
+        "semi":"warn"
+    }
+}
