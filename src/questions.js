@@ -30,10 +30,5 @@ module.exports = {
       min: 6000,
       max: 9000
     },
-    {
-      time: '3:13pm',
-      min: 6000,
-      max: 9000
-    },
   ]
 };
