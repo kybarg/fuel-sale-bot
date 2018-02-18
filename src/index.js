@@ -3,10 +3,17 @@
 const fs = require('fs'),
   TelegramBot = require('node-telegram-bot-api'),
   path = require('path'),
+  http = require('http'),
   moment = require('moment-timezone'),
   question = require('./questions'),
   schedule = require('node-schedule'),
   config = require('./config');
+
+const port = process.env.PORT || 8080;
+
+const server = http.createServer((req, res) => {
+  res.end();
+});
 
 const subscribersFile = path.resolve(process.cwd(), 'src/subscribers.json');
 
@@ -183,3 +190,6 @@ bot.onText(new RegExp('date', 'i'), async (msg) => {
   const chatId = msg.chat.id;
   bot.sendMessage(chatId, Date.now().toString());
 });
+
+
+server.listen(port);
