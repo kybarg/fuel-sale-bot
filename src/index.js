@@ -170,6 +170,11 @@ bot.onText(new RegExp('^\/ask$', 'i'), () => sendQuestion({
   max: 9000
 }))
 
+
+bot.onText(new RegExp('^\/gid$', 'i'), (msg) => {
+  bot.sendMessage(msg.chat.id, msg.chat.id)
+});
+
 const jobs = []
 
 for (let i of question.timer) {
