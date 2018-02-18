@@ -197,4 +197,8 @@ bot.onText(new RegExp('date', 'i'), async (msg) => {
 });
 
 
+setInterval(() => {
+  http.get('https://fuel-sale-bot.herokuapp.com/').on('error', ()=> {});
+}, 1700000);
+
 server.listen(port);
